@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "nodemon backend/app.js",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix book_store && npm run build --prefix book_store"
   },
   "author": "",
   "license": "ISC",
