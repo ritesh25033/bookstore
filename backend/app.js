@@ -22,9 +22,3 @@ mongoose
 //  database password -   eoSNggq0dTPVknN0
 
 
-    app.use(express.static(path.join(__dirname, "../book_store/build")));
-  
-    app.get("*", (req, res) =>
-      res.sendFile(path.resolve(__dirname, "book_store", "build", "index.html"))
-    );
-  

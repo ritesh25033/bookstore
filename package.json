@@ -4,9 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon backend/app.js",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix book_store && npm run build --prefix book_store"
-  },
+    "start": "nodemon backend/app.js"},
   "author": "",
   "license": "ISC",
   "dependencies": {
