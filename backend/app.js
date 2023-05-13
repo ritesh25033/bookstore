@@ -4,21 +4,27 @@ const router = require("./routes/book-routes");
 const cors = require("cors");
 const app = express();
 const path = require("path")
+require("dotenv").config();
 
 // Middlewares
 app.use(express.json());
 app.use(cors());
-app.use("/books",router); //localhost:5000/books
+app.use("/books",router); 
+app.use(express.static("../book_store/build"));
 
 
 
 mongoose
-    .connect("mongodb+srv://admin:eoSNggq0dTPVknN0@cluster0.f4zjpud.mongodb.net/bookStore?retryWrites=true&w=majority")
+    .connect(process.env.MONGOURI)
     .then(() => console.log("Connected to database"))
     .then(() => {
         app.listen(5000);
     }).catch((err) => console.log(err));
 
-//  database password -   eoSNggq0dTPVknN0
+app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname,"..", "book_store", "build", "index.html"));
+    });
+
+
 
 
