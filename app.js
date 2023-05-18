@@ -10,7 +10,7 @@ require("dotenv").config();
 app.use(express.json());
 app.use(cors());
 app.use("/books",router); 
-app.use(express.static("../book_store/build"));
+app.use(express.static("./book_store/build"));
 
 
 
@@ -22,7 +22,7 @@ mongoose
     }).catch((err) => console.log(err));
 
 app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname,"..", "book_store", "build", "index.html"));
+    res.sendFile(path.resolve(__dirname,"book_store", "build", "index.html"));
     });
 
 

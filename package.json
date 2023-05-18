@@ -1,22 +1,18 @@
 {
-  "name": "book-store-app",
+  "name": "backened",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "predeploy": "npm run build-server && npm run build-client",
-    "build-server": "cd backend && npm i",
-    "build-client": "cd book_store && npm i && npm run build",
-    "deploy": "cd backend && npm start"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ritesh25033/bookstore.git"
+    "start": "nodemon backend/app.js"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ritesh25033/bookstore/issues"
-  },
-  "homepage": "https://github.com/ritesh25033/bookstore#readme"
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.1",
+    "mongoose": "^6.6.4",
+    "nodemon": "^2.0.20"
+  }
 }
