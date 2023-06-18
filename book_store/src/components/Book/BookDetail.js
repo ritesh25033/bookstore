@@ -18,7 +18,7 @@ import {
     useEffect(() => {
       const fetchHandler = async () => {
         await axios
-          .get(`/books/${id}`)
+          .get(`/api/books/${id}`)
           .then((res) => res.data)
           .then((data) => setInputs(data.book));
       };
@@ -27,7 +27,7 @@ import {
   
     const sendRequest = async () => {
       await axios
-        .put(`/books/${id}`, {
+        .put(`/api/books/${id}`, {
           name: String(inputs.name),
           author: String(inputs.author),
           description: String(inputs.description),

@@ -9,7 +9,7 @@ require("dotenv").config();
 // Middlewares
 app.use(express.json());
 app.use(cors());
-app.use("/books",router); 
+app.use("/api/books",router); 
 app.use(express.static("./book_store/build"));
 
 

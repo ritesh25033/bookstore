@@ -11,7 +11,7 @@ const Book = (props) => {
      const { _id, name, author, description, price, image } = props.book;
 
      const deleteHandler = async () => {
-        await axios.delete(`/books/${_id}`)
+        await axios.delete(`api/books/${_id}`)
           .then((res) => res.data)
           .then(() => history("/"))
           .then(() => history("/books"));
